@@ -1,0 +1,55 @@
+{
+    "env": {
+        "browser": false,
+        "commonjs": true,
+        "es2021": false
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 10,
+        "project":"./tsconfig.json"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "quotes": [
+            "error",
+            "double",
+            {"allowTemplateLiterals": true}
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-constant-condition":[
+            "error",
+            {
+                "checkLoops": false
+            }
+        ],
+        "no-unused-vars":"off",
+        "@typescript-eslint/no-floating-promises":["error", {}],
+        "@typescript-eslint/no-return-await": "off",
+        "@typescript-eslint/restrict-template-expressions": ["warn", {
+            "allowNumber": true,
+            "allowBoolean": true
+        }]
+    }
+}
